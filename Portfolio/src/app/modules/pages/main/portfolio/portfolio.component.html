@@ -1,0 +1,36 @@
+<div class="content-container">
+  <div class="headline-content-container">
+    <div class="headline-container">
+      <div class="deco-line" [ngStyle]="{ width: '20%' }"></div>
+      <div
+        class="headline"
+        [ngStyle]="{ 'margin-left.px': 50, 'margin-right.px': 50 }"
+      >
+        Portfolio
+      </div>
+      <div class="deco-line" [ngStyle]="{ width: '35vw' }"></div>
+    </div>
+    <div class="introduction">
+      Explore a selection of my work here - Interact with projects to see my
+      skills in action.
+    </div>
+  </div>
+
+  <div>
+    @for (project of projects; track project; let i = $index) {
+    <app-project-card
+      [projectImage]="project.projectImage"
+      [headline]="project.headline"
+      [techStack]="project.techStack"
+      [description]="project.description"
+      [liveTestLink]="project.liveTestLink"
+      [gitLink]="project.gitLink"
+      [rowReverse]="i % 2 === 1"
+    >
+    </app-project-card>
+    }
+  </div>
+
+  <img class="big-purple-shadow" src="assets/img/shadow-purple-big.png" alt="">
+  <img class="big-green-shadow" src="assets/img/shadow-green-big.png" alt="">
+</div>

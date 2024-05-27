@@ -1,0 +1,73 @@
+@import './../../../../../styles.scss';
+@import './../../../mixins/mixin.scss';
+
+
+.content-wrapper {
+    background-color: $darkblue ;
+    @include dflex();
+    width: 100%;
+}
+
+.content-container {
+    @include dflex(row, space-between);
+    position: relative;
+    height: 100vh;
+    z-index: 60;
+    width: 100%;
+    margin-left: 15%;
+    // margin-right: 400px;
+}
+
+.text-container {
+    width: 471px;
+    margin-right:10%;
+}
+
+.personal-text-container {
+    @include dflex(row);
+    width: 471px;
+    font-size: 16px;
+    color: white;
+
+
+}
+
+.svg {
+    @include dflex(row, center, center);
+    width: 100px;
+}
+
+.personal-text {
+    width: 359px;
+    font-size: 16px;
+}
+
+.author-container {
+    @include dflex(row, center, center);
+    border-radius: 50%;
+    border: 5px solid $green;
+    overflow: hidden;
+    object-fit: cover;
+    min-width: 500px;
+    width: 500px;
+    height:500px;
+//    min-height: 400px;
+
+    >img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.deco-line {
+    border-bottom: 4px solid $green;
+    width: 100%;
+    height: 10px;
+    right: 0;
+}
+
+.shadow {
+    position: absolute;
+    z-index: 50;
+right: 0;
+}

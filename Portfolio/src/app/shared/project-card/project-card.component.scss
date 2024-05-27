@@ -1,0 +1,90 @@
+@import './../../../styles.scss';
+@import './../../../app/modules/mixins/mixin.scss';
+
+
+.content-container {
+    @include dflex();
+    width: 100%;
+    margin-bottom: 100px;
+    z-index: 50;
+
+
+    >img {
+        height: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+        z-index: 50;
+    }
+
+    &.row-reverse {
+        flex-direction: row-reverse;
+    }
+
+}
+
+.align-right {
+    text-align: right;
+}
+
+.introduction-container {
+    width: 500px;
+    z-index: 50;
+}
+
+.introduction-headline {
+    font-size: 32px;
+    color: $purple;
+    font-weight: 700;
+}
+
+.tech-stack {
+    color: $green;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.introduction {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.button-container {
+    @include dflex(row, space-between);
+}
+
+.test-button {
+    @include dflex();
+    background-color: $purple;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    width: 150px;
+
+    >a {
+        color: white;
+        font-size: 23px;
+    }
+
+    &:hover {
+        background-color: $green;
+        transition: all 0.3s ease;
+    }
+}
+
+.git-button {
+    @include dflex();
+    border: 1px solid $green;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    width: 150px;
+
+    >a {
+        color: white;
+        font-size: 23px;
+    }
+
+    &:hover {
+        background-color: $green;
+        transition: all 0.3s ease;
+    }
+}

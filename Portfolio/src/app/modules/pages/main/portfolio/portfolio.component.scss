@@ -1,0 +1,46 @@
+@import './../../../../../styles.scss';
+@import './../../../mixins/mixin.scss';
+
+.content-container {
+    @include dflex(column);
+    background-color: $darkblue;
+    width: 100%;
+    position: relative;
+}
+
+.headline-content-container {
+    @include dflex(column);
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.headline-container {
+    @include dflex(row, flex-end);
+    width: 100%;
+}
+
+.deco-line {
+    background-color: $purple;
+    height: 4px;
+}
+
+.introduction {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+.big-purple-shadow {
+    position: absolute;
+    left: 0;
+    top: 1000px;
+    z-index: 40;
+}
+
+.big-green-shadow {
+    position: absolute;
+    right: 0;
+    top: 2000px;
+    z-index: 51;
+}

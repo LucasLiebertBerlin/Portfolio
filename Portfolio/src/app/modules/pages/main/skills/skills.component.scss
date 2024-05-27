@@ -1,0 +1,63 @@
+@import './../../../../../styles.scss';
+@import './../../../mixins/mixin.scss';
+
+
+.content-container {
+    @include dflex(row, space-between);
+    position: relative;
+    height: 100vh;
+    background-color: $darkblue;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.skill-set {
+    >img {
+        height: 60px;
+        width: 60px;
+        padding-top: 50px;
+        padding-right: 80px;
+    }
+}
+
+.skills {
+    z-index: 51;
+}
+
+.text-container {
+
+    >p {
+        font-size: 16px;
+        color: white;
+
+    }
+}
+
+.button-wrapper {
+    @include dflex();
+    height: 80px;
+}
+
+.button {
+    @include dflex();
+    width: 200px;
+    height: 20px;
+    color: white;
+    background-color: $green;
+    border-radius: 10px;
+    padding: 15px 30px 15px 30px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $purple;
+        width: 210px;
+        height: 25px;
+    }
+}
+
+.shadow {
+    position: absolute;
+    left:0;
+    top: 400px;
+    z-index: 50;
+}

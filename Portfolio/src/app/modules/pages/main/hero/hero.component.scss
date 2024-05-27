@@ -1,0 +1,153 @@
+@import './../../../../../styles.scss';
+@import './../../../mixins/mixin.scss';
+
+
+.content-wrapper {
+    height: calc(100vh - 109px);
+    background-color: $darkblue;
+}
+
+.content-container {
+    @include dflex(row, space-between, center);
+height: calc(100vh - 200px);
+}
+
+.img-container {
+    height: 600px;
+    width: 500px;
+    overflow: hidden;
+    top: 100px;
+    margin-left: 100px;
+}
+
+.hero-img {
+    position: absolute;
+    z-index: 1;
+}
+
+.hero-img-shadow {
+    height: 600px;
+    width: 650px;
+    position: absolute;
+    bottom: 60px;
+    z-index: 0;
+    transform: rotate(-35deg);
+}
+
+.text-container {
+    margin-right: 100px;
+    width: 900px;
+    z-index: 3;
+}
+
+.introduce-text {
+    @include dflex(row, center, center)
+}
+
+.rotated-text-right {
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size: 64px;
+    color: white;
+}
+
+.name {
+    margin: 0;
+    line-height: 1;
+}
+
+.profession {
+    color: $purple;
+    font-size: 58px;
+    margin: 0;
+    line-height: 1;
+}
+
+.button {
+    @include dflex(row, center, center);
+    width: 165px;
+    height: 58px;
+    border-radius: 10px;
+    padding: 15px, 30px, 15px, 30px;
+    margin-top: 30px;
+    background-color: $green;
+    color: white;
+    font-size: 23px;
+    z-index: 3;
+    transition: all 0.3s ease;
+
+    &:hover {
+        width: 170px;
+        height: 62px;
+        background-color: $purple;
+    }
+}
+
+.rotated-text-left {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+.vector-shape {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 100px;
+    width: 100%;
+}
+
+.hero-footer-container {
+    @include dflex(row, flex-start, center);
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    color: white;
+
+}
+
+.decoration-line {
+    border-bottom: 4px solid $purple;
+    width: 10%;
+    margin-right: 50px;
+}
+
+.socials {
+    @include dflex(row, flex-start, center);
+    width: 100%;
+    z-index: 10;
+
+    >a {
+        margin-left: 13px;
+        font-size: 23px;
+
+        >p {
+            &:hover {
+                color: $green;
+            }
+        }
+
+        >img {
+
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(76%) sepia(15%) saturate(4614%) hue-rotate(71deg) brightness(102%) contrast(101%);
+            }
+        }
+    }
+
+
+}
+
+.scroll-down {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    font-size: 20px;
+    color: white;
+
+    &:hover {
+        color: $green;
+    }
+}

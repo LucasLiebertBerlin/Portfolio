@@ -1,0 +1,252 @@
+@import './../../../../../styles.scss';
+@import './../../../mixins/mixin.scss';
+
+
+
+.content-container {
+    position: relative;
+    @include dflex(column);
+    background-color: $darkblue;
+    height: 100vh;
+}
+
+.headline-container {
+    @include dflex(row);
+    width: 100%;
+    margin-bottom: 150px;
+
+}
+
+.deco-line {
+    background-color: $purple;
+    width: 300px;
+    height: 4px;
+    margin-right: 50px;
+}
+
+.headline {
+    width: 100%;
+    text-align: left;
+}
+
+.contact-container {
+    @include dflex();
+}
+
+.introduction {
+    @include dflex(column, start, flex-start);
+    width: 470px;
+    height: 500px;
+    margin-right: 100px;
+
+    >p {
+        font-size: 16px;
+        color: white;
+        font-weight: 400;
+    }
+}
+
+.introduction-headline {
+    color: white;
+    font-size: 32px;
+    font-weight: 700px;
+}
+
+.form-container {
+    width: 680px;
+    height: 500px;
+
+    >form {
+        width: 100%;
+    }
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+
+    >input {
+        width: 100%;
+
+        border: 1px solid $purple;
+        border-radius: 10px;
+        padding: 15px 25px 15px 25px;
+        background-color: $darkblue;
+        color: white;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &:hover {
+            border: 1px solid $green;
+        }
+
+        &:focus {
+            border-color: $green;
+            outline: none;
+        }
+    }
+
+    >textarea {
+        width: 100%;
+        max-width: 100%;
+        min-height: 150px;
+        border: 1px solid $purple;
+        border-radius: 10px;
+        padding: 15px 25px 15px 25px;
+        background-color: $darkblue;
+        color: white;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &:hover {
+            border: 1px solid $green;
+        }
+
+        &:focus {
+            border-color: $green;
+            outline: none;
+        }
+    }
+}
+
+.policy-container {
+    @include dflex(column);
+    height: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+    color: white;
+
+    >label {
+        @include dflex();
+        width: 100%;
+        height: 30px;
+
+        >p {
+            >a {
+                color: $purple;
+                margin-left: 5px;
+                margin-right: 5px;
+                text-decoration: none;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+/* Verstecke die Standard-Checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Container für die benutzerdefinierte Checkbox */
+.container {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+/* Stil für das benutzerdefinierte Checkbox-Element */
+.container .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $purple;
+    border-radius: 4px;
+    /* Abgerundete Ecken */
+    position: relative;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    margin-right: 10px;
+}
+
+/* Stil für den Haken in der Checkbox */
+.container .checkmark::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    transition: transform 0.2s ease;
+}
+
+/* Checkbox im aktivierten Zustand */
+input[type="checkbox"]:checked+.checkmark {
+    background-color: none;
+    border-color: #4CAF50;
+}
+
+input[type="checkbox"]:checked+.checkmark::after {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.container a {
+    color: $green;
+    text-decoration: none;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.form-alert {
+    width: 100%;
+    color: red;
+}
+
+.is-invalid {
+    border-color: red !important;
+    caret-color: red !important;
+    background-image: url('./../../../../../assets/img/invalid.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+}
+
+.form-button-container {
+    @include dflex();
+}
+
+.form-button {
+    width: 250px;
+    background-color: $green;
+    border-radius: 10px;
+    padding: 15px 30px 15px 30px;
+    color: white;
+
+    &:disabled {
+        opacity: 0.1;
+    }
+}
+
+.go-to-start-button {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+        filter: invert(0.5) sepia(1) saturate(5) hue-rotate(85deg) brightness(1.2);
+    }
+}
+
+.shadow-purple {
+    position: absolute;
+    z-index: 40;
+    left:0;
+    bottom:-200px;
+
+
+}

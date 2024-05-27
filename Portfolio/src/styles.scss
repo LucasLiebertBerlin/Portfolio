@@ -1,0 +1,61 @@
+* {
+    font-family: 'Poppins';  
+    cursor:none;
+    caret-color: #70E61C;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    -webkit-user-drag: none; /* Safari und Chrome */
+    -moz-user-drag: none; /* Firefox */
+    -ms-user-drag: none; /* Internet Explorer/Edge */
+    // user-drag: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Corporate Colors
+$darkblue: #141D2F;
+$lightblue: #1CDAE6;
+$purple: #9747FF;
+$green: #70E61C;
+
+.headline {
+    font-size: 90px;
+    color: white;
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: $darkblue;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $purple;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $green;
+}

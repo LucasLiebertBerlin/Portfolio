@@ -1,0 +1,64 @@
+@import './../../../../../styles.scss';
+@import './../../../mixins/mixin.scss';
+
+
+.content-container {
+    @include dflex(row, space-between);
+
+    position: relative;
+    height: 200px;
+    z-index: 55;
+    background-color: $darkblue;
+    border-top: 2px solid $green;
+    padding-left: 100px;
+    padding-right: 200px;
+}
+
+.footer-links {
+    @include dflex(column);
+
+    >a {
+        width: 50%;
+        text-align: left;
+        color: white;
+        margin-top: -25px;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    >img {
+        width: 420px;
+        margin: 0;
+    }
+}
+
+.copywrite {
+    width: 300px;
+    color: white;
+    font-size: 23px;
+}
+
+
+.socials {
+    @include dflex(row, flex-start, center);
+    z-index: 66;
+
+    >a {
+        margin-left: 13px;
+        font-size: 23px;
+
+        >p {
+            &:hover {
+                color: $green;
+            }
+        }
+
+        >img {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(76%) sepia(15%) saturate(4614%) hue-rotate(71deg) brightness(102%) contrast(101%);
+            }
+        }
+    }
+}

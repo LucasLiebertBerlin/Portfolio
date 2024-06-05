@@ -1,25 +1,9 @@
 <div class="content-wrapper">
   <div class="content-container">
     <div class="img-container">
-      <img
-        class="hero-img"
-        src="assets/img/hero-img.png"
-        alt=""
-      />
-      <img
-        class="hero-img-shadow"
-        src="assets/img/Photo shadows.png"
-        alt=""
-      />
+      <img class="hero-img" src="assets/img/hero-img.png" alt="" />
     </div>
-    <div
-      [ngStyle]="{
-        display: 'flex',
-        'flex-direction': 'column',
-        'justify-content': 'center',
-        'align-items': 'center'
-      }"
-    >
+    <div class="text-container-wrapper">
       <div class="text-container">
         <div class="introduce-text">
           <div class="rotated-text-right color-white">I am</div>
@@ -30,7 +14,7 @@
           </div>
         </div>
       </div>
-      <div [ngStyle]="{ 'height.px': 100, 'z-index': 3 }">
+      <div class="button-wrapper">
         <div class="button">Button</div>
       </div>
     </div>
@@ -38,26 +22,19 @@
   <div class="hero-footer-container">
     <div class="decoration-line"></div>
     <div class="socials">
-      <a href=""
-        ><img src="assets/img/github.png" alt=""
-      /></a>
-      <a href=""
-        ><img src="assets/img/email.png" alt=""
-      /></a>
-      <a href=""
-        ><img src="assets/img/linkedin.png" alt=""
-      /></a>
+      <a href=""><img src="assets/img/github.png" alt="" /></a>
+      <a href=""><img src="assets/img/email.png" alt="" /></a>
+      <a href=""><img src="assets/img/linkedin.png" alt="" /></a>
       <a href="" [ngStyle]="{ color: 'white' }"
-        ><p>lucas.liebert20&#64;gmail.com</p>
+        ><p class="email-adress">lucas.liebert20&#64;gmail.com</p>
       </a>
     </div>
     <div>
-      <a class="scroll-down rotated-text-left" href="#about">scroll down &#8594;</a>
+      <a class="scroll-down rotated-text-left" href="#about"
+        >scroll down &#8594;</a
+      >
     </div>
   </div>
-  <img
-    class="vector-shape"
-    src="assets/img/Vector shape hero.png"
-    alt=""
-  />
+  <img class="vector-shape" src="assets/img/Vector shape hero.png" alt="" />
+  <img class="hero-img-shadow" src="assets/img/Photo shadows.png" alt="" />
 </div>

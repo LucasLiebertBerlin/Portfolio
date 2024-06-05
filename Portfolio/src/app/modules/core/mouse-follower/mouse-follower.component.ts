@@ -4,7 +4,7 @@ import { Component, HostListener, NgZone } from '@angular/core';
 @Component({
   selector: 'app-mouse-follower',
   standalone: true,
-  imports: [ CommonModule],
+  imports: [ CommonModule ],
   templateUrl: './mouse-follower.component.html',
   styleUrl: './mouse-follower.component.scss'
 })
@@ -22,31 +22,50 @@ export class MouseFollowerComponent {
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     this.ngZone.run(() => {
-      this.mouseX = event.clientX;
-      this.mouseY = event.clientY;
-      this.updatePointerPosition();
-      this.circleStyle.display = 'block'; // Show the follower
+      if (window.innerWidth > 1000) {
+        this.mouseX = event.clientX;
+        this.mouseY = event.clientY;
+        this.updatePointerPosition();
+        this.circleStyle.display = 'block'; // Show the follower
+      } else {
+        this.circleStyle.display = 'none'; // Hide the follower
+      }
     });
   }
 
   @HostListener('document:mouseleave')
   onMouseLeave() {
     this.ngZone.run(() => {
-      this.circleStyle.display = 'none'; // Hide the follower when mouse leaves the window
+      if (window.innerWidth > 1000) {
+        this.circleStyle.display = 'none'; // Hide the follower when mouse leaves the window
+      }
     });
   }
 
   @HostListener('document:mouseenter')
   onMouseEnter() {
     this.ngZone.run(() => {
-      this.circleStyle.display = 'block'; // Show the follower when mouse re-enters the window
+      if (window.innerWidth > 1000) {
+        this.circleStyle.display = 'block'; // Show the follower when mouse re-enters the window
+      }
+    });
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.ngZone.run(() => {
+      if (window.innerWidth <= 1000) {
+        this.circleStyle.display = 'none'; // Hide the follower on small screens
+      }
     });
   }
 
   @HostListener('window:scroll')
   onScroll() {
     this.ngZone.run(() => {
-      this.updatePointerPosition();
+      if (window.innerWidth > 1000) {
+        this.updatePointerPosition();
+      }
     });
   }
 

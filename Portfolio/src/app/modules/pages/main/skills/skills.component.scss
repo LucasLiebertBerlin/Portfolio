@@ -17,8 +17,37 @@
         width: 60px;
         padding-top: 50px;
         padding-right: 80px;
+
+
+        &:hover {
+
+            animation: bounce 1s linear;
+        }
     }
 }
+
+@keyframes bounce {
+
+    20%,
+    50%,
+    80%,
+    to {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    70% {
+        transform: translateY(-15px);
+    }
+
+    90% {
+        transform: translateY(-4px);
+    }
+}
+
 
 .skills {
     z-index: 51;
@@ -57,7 +86,7 @@
 
 .shadow {
     position: absolute;
-    left:0;
+    left: 0;
     top: 400px;
     z-index: 50;
 }

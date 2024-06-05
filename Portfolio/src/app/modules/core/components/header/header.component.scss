@@ -16,13 +16,19 @@
     width: 100%;
     // max-width: 1440px;
     margin-left: 50px;
-    margin-right:100px;
+    margin-right: 100px;
 }
+
+.header-logo {
+    height: 80px;
+    z-index: 889;
+}
+
 
 a {
     color: white;
     font-size: 23px;
-   
+
 }
 
 li {
@@ -62,10 +68,188 @@ li {
     left: 0;
 }
 
+
+/* GENERAL STYLES */
+.visuallyHidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    @include dflex(row-reverse);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: 889;
+    display: none;
+}
+
+.hamburger {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:10px;
+    right:10px;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 0;
+}
+
+
+
+.hamburger2 .bar2,
+.hamburger3 .bar3,
+.hamburger4 .bar4 {
+    top: 13.5px;
+}
+
+.hamburger4 .bar5 {
+    bottom: 0px;
+}
+
+.hamburger4 .bar {
+    transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+}
+
+.hamburger4 .bar2 {
+    width: 1px;
+    transform: rotate(90deg);
+    left: 13.5px;
+}
+
+.hamburger4 .bar3 {
+    width: 1px;
+    left: 13.5px;
+
+}
+
+.checkbox4:checked+label>.hamburger4>.bar1 {
+    top: 13.5px;
+    background-color: transparent;
+}
+
+.checkbox4:checked+label>.hamburger4>.bar2 {
+    left: 0px;
+    width: 30px;
+    transform: rotate(45deg);
+}
+
+.checkbox4:checked+label>.hamburger4>.bar3 {
+    left: 0;
+    width: 30px;
+    transform: rotate(-45deg);
+}
+
+.checkbox4:checked+label>.hamburger4>.bar4 {
+    background-color: transparent;
+}
+
+.checkbox4:checked+label>.hamburger4>.bar5 {
+    bottom: 13.5px;
+    background-color: transparent;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right 1s ease;
+    height: 100vh;
+    width: 100vw;
+    z-index: 888;
+    // backdrop-filter: blur(3px);
+    background-color: rgb(22, 33, 53);
+}
+
+.mobile-nav-links.slide-in {
+    right: 0;
+    /* Endposition */
+}
+
+.mobile-nav-links.slide-out {
+    right: -100%;
+    /* Position außerhalb des Bildschirms */
+}
+
+.mobile-link-wrapper {
+    @include dflex(column);
+    overflow: auto;
+    height:100%;
+    width:100%;
+
+    padding:20px;
+    >a {
+        width:150px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 936px) {
+
+
+    // .header-wrapper {
+    //     position: fixed;
+    //     top:0;
+    //     left:0;
+    //     z-index: 999;
+    // }
+
+    .header {
+        margin-right: 5px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+    }
+}
+
+
+
 @media screen and (max-height: 300px) {
     ul {
         margin-top: 40px;
     }
 }
-
-

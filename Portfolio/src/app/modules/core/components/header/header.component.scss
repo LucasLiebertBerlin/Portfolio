@@ -8,7 +8,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // position: fixed;
+    // top:0;
+    // left:0;
+    z-index: 999;
 }
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 
 .header {
     @include dflex(row, space-between, center);
@@ -89,6 +100,7 @@ h1 {
     @include dflex(row-reverse);
     width: 100%;
     margin: 0 auto;
+    margin-right: 20px;
     display: flex;
     justify-content: space-between;
     z-index: 889;
@@ -99,9 +111,8 @@ h1 {
     margin: 0 auto;
     width: 30px;
     height: 30px;
-    position: absolute;
-    top:10px;
-    right:10px;
+    position: relative;
+
 }
 
 .hamburger .bar {
@@ -213,12 +224,13 @@ h1 {
 .mobile-link-wrapper {
     @include dflex(column);
     overflow: auto;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 
-    padding:20px;
+    padding: 20px;
+
     >a {
-        width:150px;
+        width: 150px;
         font-size: 30px;
     }
 }
@@ -247,6 +259,31 @@ h1 {
 }
 
 
+
+@media (max-width: 560px) {
+
+    .header-wrapper {
+        height: 80px;
+    }
+
+    .header {
+        margin-left: -50px;
+    }
+
+    .header-logo {
+        @include dflex();
+        height: 100%;
+        width: 100%;
+
+        >img {
+            height: 50px !important;
+        }
+    }
+
+    .container {
+        margin-right: 0;
+    }
+}
 
 @media screen and (max-height: 300px) {
     ul {

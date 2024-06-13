@@ -15,16 +15,16 @@ export class HeaderComponent implements AfterViewInit {
   burgerMenuOpen: boolean = false;
 
   @ViewChild('burgerMenu') burgerMenu!: ElementRef;
-  @ViewChild('burger') burger!: ElementRef;
+  @ViewChild('header') header!: ElementRef;
   ngAfterViewInit() { // wird ausgeführt wenn alles HTML der Komponente geladen wurde
     // console.log(this.burgerMenu);
-    console.log(this.burger);
+    console.log(this.header);
   }
 
   toggleBurgerMenu(): void {
     if (this.burgerMenu) {
       if (this.burgerMenuOpen) {
-        this.burger.nativeElement.classList.remove('fixed');
+        this.header.nativeElement.classList.remove('fixed');
         this.burgerMenu.nativeElement.classList.remove('slide-in');
         this.burgerMenu.nativeElement.classList.add('slide-out');
         setTimeout(() => {
@@ -32,7 +32,7 @@ export class HeaderComponent implements AfterViewInit {
         }, 1000); // Wartezeit, bis die Animation beendet ist
         this.burgerMenuOpen = false;
       } else {
-        this.burger.nativeElement.classList.add('fixed');
+        this.header.nativeElement.classList.add('fixed');
         this.burgerMenu.nativeElement.classList.remove('d-none');
         this.burgerMenu.nativeElement.classList.remove('slide-out');
         setTimeout(() => {

@@ -3,16 +3,18 @@
 
 
 .content-wrapper {
-    background-color: $darkblue ;
+    background-color: rgb(25, 35, 55);
     @include dflex();
     width: 100%;
+
 }
 
 .content-container {
     @include dflex(row, space-between);
+    // background-color: rgb(25, 35, 55);
     position: relative;
     height: 100vh;
-    z-index: 60;
+    z-index: 5;
     width: 100%;
     margin-left: 15%;
     // margin-right: 400px;
@@ -20,7 +22,9 @@
 
 .text-container {
     width: 471px;
-    margin-right:10%;
+    margin-right: 10%;
+
+
 }
 
 .personal-text-container {
@@ -28,9 +32,14 @@
     width: 471px;
     font-size: 16px;
     color: white;
-
-
 }
+
+.personal-start-text {
+    font-size: 16px;
+    color: white;
+    width: 471px;
+}
+
 
 .svg {
     @include dflex(row, center, center);
@@ -40,6 +49,8 @@
 .personal-text {
     width: 359px;
     font-size: 16px;
+
+
 }
 
 .author-container {
@@ -50,8 +61,10 @@
     object-fit: cover;
     min-width: 500px;
     width: 500px;
-    height:500px;
-//    min-height: 400px;
+    height: 500px;
+    //    min-height: 400px;
+    z-index: 5;
+
 
     >img {
         width: 100%;
@@ -64,10 +77,95 @@
     width: 100%;
     height: 10px;
     right: 0;
+    z-index: 5;
 }
 
 .shadow {
     position: absolute;
-    z-index: 50;
-right: 0;
+    z-index: 4;
+    right: 0;
+}
+
+
+@media (max-width: 1305px) {
+
+    .content-container {
+        margin-left: 5%;
+    }
+
+}
+
+@media (max-width: 1150px) {
+
+    .author-container {
+        display: none;
+    }
+
+    .deco-line {
+        display: none;
+    }
+
+    .content-container {
+        margin-left: 0;
+        @include dflex(row, center, center);
+    }
+
+    .text-container {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+
+
+
+
+@media (max-width: 560px) {
+
+    .content-wrapper {
+        background-color: $darkblue;
+
+    }
+
+.text-container {
+    max-width: 80vw;
+}
+
+    .headline {
+        font-size: 45px;
+    }
+
+    .personal-start-text {
+        width:auto;
+        text-wrap: wrap;
+        // word-break: break-all;
+    }
+    .personal-text-container {
+        width: auto;
+        @include dflex(row, flex-start, flex-start);
+
+    }
+    .personal-text {
+        width: auto;
+        text-wrap: wrap;
+
+    }
+    .svg {
+        margin-top:20px;
+        margin-right: 10px;
+    }
+    
+}
+
+
+
+@media (max-width: 400px) { 
+
+
+.content-container {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
 }

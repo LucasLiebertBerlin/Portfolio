@@ -1,5 +1,5 @@
-<div class="content-wrapper">
-  <div class="content-container">
+<div class="content-wrapper" id="heroElement" #hero>
+  <div class="content-container" id="hero">
     <img class="hero-img" src="assets/img/hero-img.png" alt="" />
 
     <div class="text-container-wrapper">
@@ -12,7 +12,10 @@
           </div>
         </div>
         <div class="button-wrapper">
-          <div class="button">Button</div>
+ 
+          <a [ngStyle]="{ color: 'white' }" href="#contact"><div class="button">
+          Let´s talk!
+          </div></a>
         </div>
       </div>
     </div>
@@ -20,19 +23,28 @@
   <div class="hero-footer-container">
     <div class="decoration-line"></div>
     <div class="socials">
-      <a href=""><img src="assets/img/github.png" alt="" /></a>
-      <a href=""><img src="assets/img/email.png" alt="" /></a>
-      <a href=""><img src="assets/img/linkedin.png" alt="" /></a>
-      <a href="" [ngStyle]="{ color: 'white' }"
-        ><p class="email-adress">lucas.liebert20&#64;gmail.com</p>
-      </a>
+      <a href="https://github.com/LucasLiebertBerlin"><img src="assets/img/github.png" alt="" /></a>
+
+      <img (click)="copyText()" src="assets/img/email.png" alt="" />
+      <a href="https://www.linkedin.com/in/lucas-liebert-a4072a25b/"
+        ><img src="assets/img/linkedin.png" alt=""
+      /></a>
+      <p
+        (click)="copyText()"
+        [ngStyle]="{ color: 'white' }"
+        class="email-adress"
+      >
+        lucas.liebert20&#64;gmail.com
+      </p>
     </div>
     <div>
       <a class="scroll-down rotated-text-left" href="#about"
         >scroll down &#8594;</a
       >
-    </div> 
+    </div>
   </div>
   <img class="vector-shape" src="assets/img/Vector shape hero.png" alt="" />
-  <img class="hero-img-shadow" src="assets/img/Photo shadows.png" alt="" />
+  <img class="hero-img-shadow" src="assets/img/hero-shadows.png" alt="" />
+
+  <div #copyAlert class="copy-alert d-none">Email kopiert!</div>
 </div>

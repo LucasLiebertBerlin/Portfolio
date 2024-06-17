@@ -7,13 +7,13 @@
     <div class="nav-links">
       <ul>
         <li><a class="underline-link" href="#about">About me</a></li>
-        <li><a class="underline-link" href="#">Skills</a></li>
-        <li><a class="underline-link" href="#">Portfolio</a></li>
+        <li><a class="underline-link" href="#skills">Skills</a></li>
+        <li><a class="underline-link" href="#portfolio">Portfolio</a></li>
       </ul>
     </div>
 
     <div class="container" #burger>
-      <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden" />
+      <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden" #checkbox4 />
       <label for="checkbox4" (click)="toggleBurgerMenu()" id="burgerMenuButton">
         <div class="hamburger hamburger4">
           <span class="bar bar1"></span>
@@ -27,9 +27,9 @@
 
     <div class="mobile-nav-links d-none" #burgerMenu>
       <div class="mobile-link-wrapper">
-        <a href="#about">About me</a>
-        <a href="#">Skills</a>
-        <a href="#">Portfolio</a>
+        <a (click)="linkClicked()" href="#about">About me</a>
+        <a (click)="linkClicked()" href="#">Skills</a>
+        <a (click)="linkClicked()" href="#">Portfolio</a>
       </div>
     </div>
   </div>

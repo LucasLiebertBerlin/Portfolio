@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ClipboardService } from '../../../../shared/services/clipboard/clipboard.service.spec';
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  @ViewChild('copyAlert', { static: false }) copyAlert!: ElementRef;
+
+  constructor(private clipboardService: ClipboardService) {}
+
+  copyText() {
+    const textToCopy = 'lucas.liebert20@gmail.com';
+    this.clipboardService.copyTextToClipboard(textToCopy, this.copyAlert);
+  }
 }

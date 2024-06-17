@@ -1,8 +1,6 @@
 @import './../../../../../styles.scss';
 @import './../../../mixins/mixin.scss';
 
-
-
 .content-container {
     position: relative;
     @include dflex(column);
@@ -144,36 +142,28 @@
             }
         }
     }
-
-
 }
 
-
-/* Verstecke die Standard-Checkbox */
 input[type="checkbox"] {
     display: none;
 }
 
-/* Container für die benutzerdefinierte Checkbox */
 .container {
     display: flex;
     align-items: center;
     font-size: 15px;
 }
 
-/* Stil für das benutzerdefinierte Checkbox-Element */
 .container .checkmark {
     width: 20px !important;
     height: 20px !important;
     border: 2px solid $purple;
     border-radius: 4px;
-    /* Abgerundete Ecken */
     position: relative;
     transition: background-color 0.2s ease, border-color 0.2s ease;
     margin-right: 10px;
 }
 
-/* Stil für den Haken in der Checkbox */
 .container .checkmark::after {
     content: '';
     position: absolute;
@@ -187,7 +177,6 @@ input[type="checkbox"] {
     transition: transform 0.2s ease;
 }
 
-/* Checkbox im aktivierten Zustand */
 input[type="checkbox"]:checked+.checkmark {
     background-color: none;
     border-color: #4CAF50;
@@ -258,12 +247,10 @@ input[type="checkbox"]:checked+.checkmark::after {
     bottom: -200px;
 }
 
-
 @media (max-width: 1395px) {
 
     .contact-container {
         @include dflex(column);
-
     }
 
     .introduction {
@@ -303,7 +290,6 @@ input[type="checkbox"]:checked+.checkmark::after {
 
 @media (max-width: 1104px) {
 
-
     .policy-container {
         >label {
             >p {
@@ -339,7 +325,6 @@ input[type="checkbox"]:checked+.checkmark::after {
         bottom: -200px;
         height: 400px;
     }
-
 }
 
 @media (max-width: 750px) {
@@ -347,7 +332,6 @@ input[type="checkbox"]:checked+.checkmark::after {
     .form-container {
         max-width: 80vw;
     }
-
 }
 
 @media (max-width: 645px) {
@@ -357,7 +341,6 @@ input[type="checkbox"]:checked+.checkmark::after {
         bottom: 50px;
         z-index: 60;
     }
-
 
     .policy-container {
         >label {
@@ -394,13 +377,10 @@ input[type="checkbox"]:checked+.checkmark::after {
         font-size: 23px;
     }
 
-
-
     .policy-container {
         height: auto;
     }
 }
-
 
 @media (max-width: 420px) {
 
@@ -411,10 +391,7 @@ input[type="checkbox"]:checked+.checkmark::after {
         bottom: -200px;
         height: 350px;
     }
-
-
 }
-
 
 @media (max-width: 374px) {
 
@@ -442,6 +419,4 @@ input[type="checkbox"]:checked+.checkmark::after {
         bottom: -200px;
         height: 350px;
     }
-
-
 }

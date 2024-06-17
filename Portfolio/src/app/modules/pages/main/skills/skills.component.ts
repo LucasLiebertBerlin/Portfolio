@@ -9,5 +9,4 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-
 }

@@ -1,10 +1,8 @@
 @import './../../../../../styles.scss';
 @import './../../../mixins/mixin.scss';
 
-
 .content-container {
     @include dflex(row, space-between);
-
     position: relative;
     height: 200px;
     z-index: 55;
@@ -56,7 +54,17 @@
     @include dflex(row, flex-start, center);
     z-index: 66;
 
+    >img {
+        margin-left: 13px;
+        font-size: 23px;
+
+        &:hover {
+            filter: brightness(0) saturate(100%) invert(76%) sepia(15%) saturate(4614%) hue-rotate(71deg) brightness(102%) contrast(101%);
+        }
+    }
+
     >a {
+        @include dflex();
         margin-left: 13px;
         font-size: 23px;
 
@@ -83,8 +91,6 @@
 
 }
 
-
-
 @media (max-width: 875px) {
     .content-container {
         @include dflex(column);
@@ -104,14 +110,16 @@
 
     .footer-links {
         >img {
-            max-width:70vw;
+            max-width: 70vw;
         }
+
         >a {
             display: none;
         }
     }
+
     .mobile-imprint {
         display: block;
     }
-    
+
 }

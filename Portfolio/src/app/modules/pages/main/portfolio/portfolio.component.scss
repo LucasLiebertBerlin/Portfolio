@@ -54,7 +54,6 @@
     width: 10%;
     background-color: $purple;
     height: 4px;
-
 }
 
 .deco-line-right {
@@ -63,28 +62,22 @@
     height: 4px;
 }
 
-
 @media (max-width: 1445px) {
 
     .deco-line-right {
         width: 30vw;
     }
-
 }
 
 @media (max-width: 1275px) {
 
     .big-purple-shadow {
-
         left: 0%;
         top: 25%;
         height: 750px;
         width: 400px;
     }
-
 }
-
-
 
 @media (max-width: 965px) {
 
@@ -95,9 +88,7 @@
     .deco-line-left {
         width: 10%;
     }
-
 }
-
 
 @media (max-width: 790px) {
 
@@ -108,9 +99,7 @@
         height: 650px;
         width: 400px;
     }
-
 }
-
 
 @media (max-width: 580px) {
 
@@ -136,9 +125,7 @@
         height: 650px;
         width: 400px;
     }
-
 }
-
 
 @media (max-width: 460px) {
 
@@ -156,7 +143,6 @@
 
 @media (max-width: 340px) {
 
-
     .big-purple-shadow {
 
         left: 0%;
@@ -172,6 +158,4 @@
         bottom: -200px;
         height: 500px;
     }
-
-
 }

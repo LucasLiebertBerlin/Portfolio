@@ -1,7 +1,6 @@
 @import './../../../../../styles.scss';
 @import './../../../mixins/mixin.scss';
 
-
 .content-container {
     @include dflex(row, space-between);
     position: relative;
@@ -18,20 +17,18 @@
 .skill-set {
     @include dflex(row, flex-start);
     flex-wrap: wrap;
-
 }
 
 .skill {
     @include dflex(column);
     padding: 30px;
-    width:100px;
+    width: 100px;
+
     >img {
         height: 60px;
         width: 60px;
 
-
         &:hover {
-
             animation: bounce 1s linear;
         }
     }
@@ -66,7 +63,6 @@
     }
 }
 
-
 .skills {
     z-index: 51;
 }
@@ -76,14 +72,12 @@
     >p {
         font-size: 16px;
         color: white;
-
     }
 }
 
 .skill-text {
     width: 471px;
     text-align: center;
-
 }
 
 .button-wrapper {
@@ -132,7 +126,6 @@
     }
 }
 
-
 .shadow {
     position: absolute;
     left: 0;
@@ -142,7 +135,6 @@
 
 .headline-container {
     @include dflex();
-
 }
 
 .deco-line {
@@ -152,8 +144,6 @@
     background-color: $purple;
     margin-left: 10px;
 }
-
-
 
 @media (max-width: 1724px) {
 
@@ -167,7 +157,6 @@
 @media (max-width: 1307px) {
 
     .content-container {
-
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -181,21 +170,10 @@
     }
 }
 
-// @media (max-width: 970px) { 
-//     .skill-set {
-//         >img {
-//             padding:40px;
-
-//         }
-//     }
-
-// }
-
 @media (max-width: 890px) {
 
     .content-container {
         @include dflex(column-reverse, center, center);
-
     }
 
     .skills {
@@ -207,21 +185,16 @@
     }
 }
 
-
-
-
 @media (max-width: 580px) {
 
     .text-container {
         @include dflex(column, flex-end, flex-end);
     }
 
-
     .headline-container {
         @include dflex(row, flex-end, center);
         width: 100vw;
     }
-
 
     .headline {
         font-size: 45px;
@@ -258,21 +231,16 @@
     }
 }
 
-
 @media (max-width: 510px) {
-
-
-
 
     .skill-text {
         width: auto;
         text-wrap: wrap;
-
     }
 
     .skills {
         max-width: auto;
-        margin-top:5px;
+        margin-top: 5px;
     }
 
     .skill-set {
@@ -281,29 +249,17 @@
 
         }
     }
-    .skill {
-        padding:19px;
-    
-    }
 
+    .skill {
+        padding: 19px;
+    }
 }
 
 @media (max-width: 510px) {
 
-
-
-.content-container {
-    height: auto;
-    padding-top: 100px;
-    padding-bottom: 0px;
-}
-    // .skill {
-    //     >img {
-    //        height: 50px;
-    //        width: 50px;
-
-    //     }
-    // }
-
-
+    .content-container {
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 0px;
+    }
 }

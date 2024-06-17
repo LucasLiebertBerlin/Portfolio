@@ -8,20 +8,19 @@ import { FormsModule, NgForm } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
 
-http = inject(HttpClient);
-
+  http = inject(HttpClient);
 
   contactData = {
     name: '',
     email: '',
     message: '',
     privacyPolicy: false,
+  };
 
-  }
   mailTest = true;
 
   post = {
@@ -29,19 +28,17 @@ http = inject(HttpClient);
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json',
+        'Accept': 'text/plain',
       },
     },
   };
 
   onSubmit(ngForm: NgForm) {
-
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {
@@ -50,9 +47,7 @@ http = inject(HttpClient);
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
     }
   }
-
 }

@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { HeroComponent } from './hero/hero.component';
 import { MouseFollowerComponent } from '../../core/mouse-follower/mouse-follower.component';
 import { AboutComponent } from './about/about.component';
@@ -16,6 +16,5 @@ import { FooterComponent } from '../../core/components/footer/footer.component';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-
 
 }

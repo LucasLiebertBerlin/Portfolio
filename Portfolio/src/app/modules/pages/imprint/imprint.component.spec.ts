@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MouseFollowerComponent } from './mouse-follower.component';
 
-describe('MouseFollowerComponent', () => {
-  let component: MouseFollowerComponent;
-  let fixture: ComponentFixture<MouseFollowerComponent>;
+import { ImprintComponent } from './imprint.component';
+
+describe('ImprintComponent', () => {
+  let component: ImprintComponent;
+  let fixture: ComponentFixture<ImprintComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MouseFollowerComponent]
+      imports: [ImprintComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MouseFollowerComponent);
+    fixture = TestBed.createComponent(ImprintComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,13 +1,10 @@
 @import './../../../../../styles.scss';
 @import './../../../mixins/mixin.scss';
 
-
 .content-wrapper {
     position: relative;
     height: calc(100vh - 109px);
     background-color: $darkblue;
-
-
 }
 
 .content-container {
@@ -16,21 +13,12 @@
     overflow-y: hidden;
 }
 
-// .img-container {
-//     position: relative;
-//     height: 600px;
-//     width: 500px;
-//     top: -70px;
-//     margin-left: 100px;
-// }
-
 .hero-img {
     position: absolute;
     z-index: 1;
     right: -100px;
     bottom: 0px;
     height: 90vh;
-
 }
 
 .hero-img-shadow {
@@ -92,6 +80,8 @@
 
 .button-wrapper {
     width: 100%;
+    height: 62px;
+    margin-top: 30px;
     @include dflex(row, center, center);
 }
 
@@ -101,7 +91,6 @@
     height: 58px;
     border-radius: 10px;
     padding: 15px, 30px, 15px, 30px;
-    margin-top: 30px;
     margin-left: 70px;
     background-color: $green;
     color: white;
@@ -121,7 +110,6 @@
     transform: rotate(90deg);
 }
 
-
 .hero-footer-container {
     @include dflex(row, flex-start, center);
     position: absolute;
@@ -130,7 +118,6 @@
     width: 100%;
     height: 100px;
     color: white;
-
 }
 
 .decoration-line {
@@ -144,7 +131,16 @@
     width: 100%;
     z-index: 10;
 
+    >img {
+        margin-left: 13px;
+
+        &:hover {
+            filter: brightness(0) saturate(100%) invert(76%) sepia(15%) saturate(4614%) hue-rotate(71deg) brightness(102%) contrast(101%);
+        }
+    }
+
     >a {
+        @include dflex();
         margin-left: 13px;
         font-size: 23px;
 
@@ -161,11 +157,10 @@
             }
         }
     }
-
-
 }
 
 .scroll-down {
+    display: none;
     width: 200px;
     position: absolute;
     right: 0;
@@ -178,6 +173,38 @@
     }
 }
 
+.padding-top {
+    padding-top: 108px;
+}
+
+.copy-alert {
+    position: fixed;
+    bottom: -3000px;
+    left: 50%;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 999;
+    padding: 10px;
+    color: white;
+    transform: translate(-50%);
+    transition: all 0.2s ease-in-out, transform 0.4s ease-in-out 0.4s;
+}
+
+.copy-alert.slide-in {
+    bottom: 50px;
+}
+
+.copy-alert.slide-out {
+    bottom: -3000px;
+}
+.email-adress {
+    margin-left:15px;
+    font-size: 23px;
+    &:hover {
+        color: $green !important;
+    }
+}
 
 @media (max-width: 2000px) {
 
@@ -198,7 +225,6 @@
         margin-left: 100px;
         width: 600px;
     }
-
 }
 
 @media (max-width: 1100px) {
@@ -206,80 +232,6 @@
         @include dflex(column);
     }
 
-
-
-
-}
-
-
-
-
-
-@media (max-width: 940px) {}
-
-
-
-
-@media (max-width: 860px) {
-
-    .text-container {
-        margin-left: 0px;
-    }
-}
-
-@media (max-height: 750px) {
-    .hero-img {
-        height: 80vh;
-    }
-}
-
-
-
-
-@media (max-width: 760px) {
-
-
-    .scroll-down {
-        display: none;
-    }
-
-    .email-adress {
-        display: none;
-    }
-
-
-
-    .introduce-text {
-        width: auto;
-    }
-
-    .rotated-text-right {
-        font-size: 24px;
-    }
-
-    .name {
-        font-size: 48px;
-    }
-
-    .profession {
-        font-size: 28px;
-    }
-
-    .introduce-text {
-        justify-content: flex-start;
-    }
-
-    .button-wrapper {
-        justify-content: flex-start;
-        margin-left: 50px;
-    }
-
-    .content-container {
-        overflow: hidden;
-    }
-}
-
-@media (max-width: 560px) {
     .content-container {
         justify-content: flex-end;
         align-items: flex-end;
@@ -302,7 +254,6 @@
 
     .button-wrapper {
         @include dflex(row, center, center);
-        // display: none;
     }
 
     .button-wrapper {
@@ -333,6 +284,7 @@
         margin-right: 20vw;
 
         >a {
+
             margin-left: 15px;
             margin-right: 15px;
         }
@@ -340,23 +292,57 @@
 
     .decoration-line {
         width: 20vw;
-        // width: calc(50vw - 280px);
         margin-right: 0;
     }
 
     .hero-footer-container {
         height: auto;
     }
+
+    .scroll-down {
+        display: block;
+    }
 }
 
+@media (max-width: 860px) {
 
+    .text-container {
+        margin-left: 0px;
+    }
+}
 
-@media (max-width: 450px) {}
+@media (max-width: 760px) {
 
-@media (max-width: 440px) {}
+    .scroll-down {
+        display: none;
+    }
+
+    .email-adress {
+        display: none;
+    }
+
+    .introduce-text {
+        width: auto;
+    }
+
+    .rotated-text-right {
+        font-size: 24px;
+    }
+
+    .name {
+        font-size: 48px;
+    }
+
+    .profession {
+        font-size: 28px;
+    }
+
+    .content-container {
+        overflow: hidden;
+    }
+}
 
 @media (max-width: 375px) {
-
 
     .name {
         font-size: 38px;

@@ -1,7 +1,6 @@
 @import './../../../styles.scss';
 @import './../../../app/modules/mixins/mixin.scss';
 
-
 .content-container {
     @include dflex();
     width: 100%;

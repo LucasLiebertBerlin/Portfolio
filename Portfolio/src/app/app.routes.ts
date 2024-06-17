@@ -4,7 +4,7 @@ import { ImprintComponent } from './modules/pages/imprint/imprint.component';
 
 
 export const routes: Routes = [
-
-    { path: '', component: MainComponent },
-    { path: 'imprint', component: ImprintComponent }
-  ];
+  // { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', component: MainComponent },
+  { path: 'imprint', component: ImprintComponent }
+];

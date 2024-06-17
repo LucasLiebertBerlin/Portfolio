@@ -1,0 +1,12 @@
+@import './../../../../styles.scss';
+@import './../../mixins/mixin.scss';
+
+
+.imprint-container {
+    @include dflex(column);
+    text-align: center;
+    width:100%;
+    height:100%;
+    margin: 100px;
+    color: white;
+}

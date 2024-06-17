@@ -21,7 +21,7 @@ export class ContactComponent {
     privacyPolicy: false,
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://lucas-liebert.com/sendMail.php',

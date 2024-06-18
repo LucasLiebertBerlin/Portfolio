@@ -82,6 +82,28 @@
     }
 }
 
+.copy-alert {
+    position: fixed;
+    bottom: -3000px;
+    left: 50%;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 999;
+    padding: 10px;
+    color: white;
+    transform: translate(-50%);
+    transition: all 0.2s ease-in-out, transform 0.4s ease-in-out 0.4s;
+}
+
+.copy-alert.slide-in {
+    bottom: 50px;
+}
+
+.copy-alert.slide-out {
+    bottom: -3000px;
+}
+
 
 @media (max-width: 1175px) {
     .content-container {

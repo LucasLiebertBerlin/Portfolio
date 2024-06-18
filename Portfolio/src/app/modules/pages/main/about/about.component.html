@@ -1,7 +1,7 @@
 <div class="content-wrapper" id="about">
   <div class="content-container">
     <div class="text-container">
-      <div class="headline">About me</div>
+      <div [@slideInFromBottom]="slideInBottom" class="headline">About me</div>
       <div class="text">
         <div
          class="personal-start-text"
@@ -54,10 +54,10 @@
       <div></div>
     </div>
 
-    <div class="author-container">
+    <div [@slideInOutRight]="slideInRight" class="author-container">
       <img src="assets/img/author.png" alt="" />
     </div>
-    <div class="deco-line"></div>
+    <div [@slideInOutRight]="slideInRight" class="deco-line"></div>
   </div>
   <img class="shadow" src="assets/img/shadow-purple.png" alt="" />
 </div>

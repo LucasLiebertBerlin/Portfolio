@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="projects-container">
     @for (project of projects; track project; let i = $index) {
     <app-project-card
       [projectImage]="project.projectImage"
@@ -25,6 +25,7 @@
       [liveTestLink]="project.liveTestLink"
       [gitLink]="project.gitLink"
       [rowReverse]="i % 2 === 1"
+
     >
     </app-project-card>
     }

@@ -2,7 +2,7 @@
   <div class="mobile-button-wrapper">
     <div class="mobile-button">Get in touch</div>
   </div>
-  <div class="skills">
+  <div class="skills" [@slideInOutLeft]="slideIn">
     <div class="skill-set">
       <div class="skill">
         <img src="assets/img/skills/Angular.png" alt="" />
@@ -48,7 +48,7 @@
   </div>
   <div class="text-container">
     <div class="headline-container">
-      <div class="headline text-center">My skills</div>
+      <div class="headline text-center" [@slideInFromBottom]="slideInBottom">My skills</div>
       <div class="deco-line"></div>
     </div>
     <p class="skill-text">

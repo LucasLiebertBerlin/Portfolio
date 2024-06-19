@@ -1,5 +1,5 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
-import { ClipboardService } from '../../../../shared/services/clipboard/clipboard.service.spec';
+import { ClipboardService } from '../../../../shared/services/clipboard/clipboard.service';
 import { CommonModule } from '@angular/common';
 import { slideInOutLeft, slideInOutRight, slideInFromBottom } from '../../../../shared/animations/animations';
 import { ViewportService } from '../../../../shared/services/viewport/viewport-service.service';

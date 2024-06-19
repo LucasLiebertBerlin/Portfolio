@@ -6,7 +6,9 @@
 
   <div class="contact-container">
     <div class="introduction">
-      <div class="introduction-headline"><b>Got a problem to solve?</b></div>
+      <div [@slideInFromBottom]="slideInBottom" class="introduction-headline">
+        <b>Got a problem to solve?</b>
+      </div>
       <p>
         Contact me through this form, I am interested in hearing from you,
         knowing your ideas and contributing to your projects with my work.
@@ -14,7 +16,7 @@
       <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
     <div class="form-container">
-      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <form [@slideInOutRight]="slideInRight" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="form-group">
           <input
             #name="ngModel"
@@ -152,4 +154,21 @@
     </svg>
   </a>
   <img class="shadow-purple" src="assets/img/shadow-purple-big2.png" alt="" />
+<div class="email-alert d-none" #emailAlert>
+  <div class="email-alert-container">
+    <div class="animation">
+      <div class="i-mail">
+        <div class="mail-anim"></div>
+      </div>
+      <div class="line"></div>
+      <div class="i-success">
+        <div class="success-anim"></div>
+      </div>
+    </div>
+    <div class="message">
+      Your message has been sent successfully
+    </div>
+  </div>
+  
+</div>
 </div>

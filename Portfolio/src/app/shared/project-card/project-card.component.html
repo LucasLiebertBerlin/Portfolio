@@ -1,4 +1,8 @@
-<div [ngClass]="{ 'row-reverse': rowReverse }" class="content-container">
+<div
+  [@slideInOutLeft]="slideIn"
+  [ngClass]="{ 'row-reverse': rowReverse }"
+  class="content-container"
+>
   <img [src]="projectImage" alt="" />
   <div class="introduction-container">
     <div

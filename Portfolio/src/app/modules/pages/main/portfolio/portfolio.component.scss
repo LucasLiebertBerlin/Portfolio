@@ -62,6 +62,10 @@
     height: 4px;
 }
 
+.projects-container {
+    z-index: 80;
+}
+
 @media (max-width: 1445px) {
 
     .deco-line-right {

@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { ClipboardService } from '../../../../shared/services/clipboard/clipboard.service.spec';
+import { ClipboardService } from '../../../../shared/services/clipboard/clipboard.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

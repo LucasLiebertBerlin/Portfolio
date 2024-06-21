@@ -3,11 +3,12 @@ import { Component, ElementRef, AfterViewInit, OnDestroy, ChangeDetectorRef } fr
 import { Subscription } from 'rxjs';
 import { ViewportService } from '../../../../shared/services/viewport/viewport-service.service'; 
 import { slideInOutLeft, slideInOutRight, slideInFromBottom } from '../../../../shared/animations/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [ CommonModule],
+  imports: [ CommonModule, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
   animations: [

@@ -1,16 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProjectCardComponent } from '../../../../shared/project-card/project-card.component';
-import { PROJECTS, Project } from '../../../data/project-data';
+import { PROJECTS } from '../../../data/project-data';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [ CommonModule, ProjectCardComponent],
+  imports: [CommonModule, ProjectCardComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+  projects = PROJECTS.map((project, index) => ({
+    ...project,
+    headlineKey: `PORTFOLIO.PROJECTS.${index}.HEADLINE`,
+    techStackKey: `PORTFOLIO.PROJECTS.${index}.TECH_STACK`,
+    descriptionKey: `PORTFOLIO.PROJECTS.${index}.DESCRIPTION`
+  }));
 
-projects: Project[] = PROJECTS;
+  constructor(private translate: TranslateService) {}
 
+  getTranslatedProjects() {
+    return this.projects.map(project => ({
+      ...project,
+      headline: this.translate.instant(project.headlineKey),
+      techStack: this.translate.instant(project.techStackKey),
+      description: this.translate.instant(project.descriptionKey)
+    }));
+  }
 }

@@ -1,6 +1,6 @@
 <div class="content-container" id="skills">
   <div class="mobile-button-wrapper">
-    <div class="mobile-button">Get in touch</div>
+    <div class="mobile-button">{{ 'SKILLS.GET_IN_TOUCH' | translate }}</div>
   </div>
   <div class="skills" [@slideInOutLeft]="slideIn">
     <div class="skill-set">
@@ -48,15 +48,14 @@
   </div>
   <div class="text-container">
     <div class="headline-container">
-      <div class="headline text-center" [@slideInFromBottom]="slideInBottom">My skills</div>
+      <div class="headline text-center" [@slideInFromBottom]="slideInBottom">{{ 'SKILLS.MY_SKILLS' | translate }}</div>
       <div class="deco-line"></div>
     </div>
     <p class="skill-text">
-      I have gained experience in building projects with various front end
-      technologies and concepts.
+      {{ 'SKILLS.DESCRIPTION' | translate }}
     </p>
 
-    <div class="button-wrapper"><a href="#portfolio"><div class="button">Get in touch</div></a></div>
+    <div class="button-wrapper"><a href="#portfolio"><div class="button">{{ 'SKILLS.GET_IN_TOUCH' | translate }}</div></a></div>
   </div>
   <img class="shadow" src="assets/img/green-shadow.png" alt="" />
 </div>

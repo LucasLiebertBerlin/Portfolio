@@ -5,20 +5,18 @@
     <div class="text-container-wrapper">
       <div class="text-container">
         <div class="introduce-text">
-  
           <div [@slideInOutLeft]="slideIn">
-          <div class="rotated-text-right color-white">I am</div>
-        </div>
+            <div class="rotated-text-right color-white">{{ 'HERO.IAM' | translate }}</div>
+          </div>
           <div [@slideInFromBottom]="slideInBottom">
-            <p class="headline name">Lucas Liebert</p>
-            <p class="profession">FRONTEND DEVELOPER</p>
+            <p class="headline name">{{ 'HERO.NAME' | translate }}</p>
+            <p class="profession">{{ 'HERO.JOBTITLE' | translate }}</p>
           </div>
         </div>
         <div class="button-wrapper">
- 
-          <a [ngStyle]="{ color: 'white' }" href="#contact"><div class="button">
-          Let´s talk!
-          </div></a>
+          <a [ngStyle]="{ color: 'white' }" href="#contact">
+            <div class="button">{{ 'HERO.LETSTALK' | translate }}</div>
+          </a>
         </div>
       </div>
     </div>
@@ -27,27 +25,18 @@
     <div class="decoration-line"></div>
     <div class="socials">
       <a target="_blank" href="https://github.com/LucasLiebertBerlin"><img src="assets/img/github.png" alt="" /></a>
-
       <img (click)="copyText()" src="assets/img/email.png" alt="" />
-      <a target="_blank" href="https://www.linkedin.com/in/lucas-liebert-a4072a25b/"
-        ><img src="assets/img/linkedin.png" alt=""
-      /></a>
-      <p
-        (click)="copyText()"
-        [ngStyle]="{ color: 'white' }"
-        class="email-adress"
-      >
+      <a target="_blank" href="https://www.linkedin.com/in/lucas-liebert-a4072a25b/"><img src="assets/img/linkedin.png" alt="" /></a>
+      <p (click)="copyText()" [ngStyle]="{ color: 'white' }" class="email-adress">
         lucas.liebert20&#64;gmail.com
       </p>
     </div>
     <div>
-      <a class="scroll-down rotated-text-left" href="#about"
-        >scroll down &#8594;</a
-      >
+      <a class="scroll-down rotated-text-left" href="#about">{{ 'HERO.SCROLLDOWN' | translate }}</a>
     </div>
   </div>
   <img class="vector-shape" src="assets/img/Vector shape hero.png" alt="" />
   <img class="hero-img-shadow" src="assets/img/hero-shadows.png" alt="" />
 
-  <div #copyAlert class="copy-alert d-none">Email kopiert!</div>
+  <div #copyAlert class="copy-alert d-none">{{ 'HERO.EMAIL_COPIED' | translate }}</div>
 </div>

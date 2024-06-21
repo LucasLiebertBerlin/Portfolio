@@ -1,0 +1,77 @@
+{
+    "HEADER": {
+        "ABOUT_ME": "About me",
+        "SKILLS": "Skills",
+        "PORTFOLIO": "Portfolio"
+    },
+    "HERO": {
+        "JOBTITLE": "Frontend Developer",
+        "LETSTALK": "Let's talk!",
+        "IAM": "I am",
+        "NAME": "Lucas Liebert",
+        "SCROLLDOWN": "Scroll down →",
+        "EMAIL_COPIED": "Email copied!"
+    },
+    "ABOUT": {
+        "HEADLINE": "About me",
+        "INTRO": "Hi, I am Lucas Liebert, a Front-end Developer based in Glienicke/Nordbahn, Germany. I specialize in JavaScript and Angular, with experience in developing web applications, business applications, responsive websites, and browser games.",
+        "TEXT1": "I have a solid foundation in JavaScript and Angular, focusing on developing engaging and functional web applications. My enthusiasm for modern web technologies drives my continuous learning and growth.",
+        "TEXT2": "I stay calm and precise under pressure, ensuring efficient work. My effective time management helps me complete projects on schedule, reflecting my commitment to reliability and growth."
+    },
+    "SKILLS": {
+        "GET_IN_TOUCH": "Get in touch",
+        "MY_SKILLS": "My skills",
+        "DESCRIPTION": "I have gained experience in building projects with various front end technologies and concepts."
+    },
+    "PORTFOLIO": {
+        "HEADLINE": "Portfolio",
+        "INTRODUCTION": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "PROJECTS": {
+            "0": {
+                "HEADLINE": "Join",
+                "TECH_STACK": "Angular, Typescript, HTML, CSS, Firebase",
+                "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+            },
+            "1": {
+                "HEADLINE": "Fallen Angels",
+                "TECH_STACK": "JavaScript, HTML, CSS",
+                "DESCRIPTION": "A web-based game where you control your character to fight various enemies with different abilities. The ultimate goal is to defeat the final boss."
+            },
+            "2": {
+                "HEADLINE": "Pokedex",
+                "TECH_STACK": "JavaScript, HTML, CSS, API",
+                "DESCRIPTION": "A comprehensive collection of all existing Pokémon, complete with detailed descriptions of their characteristics, abilities, and unique attributes, accessible via an API."
+            },
+            "3": {
+                "HEADLINE": "QuizApp",
+                "TECH_STACK": "JavaScript, HTML, CSS",
+                "DESCRIPTION": "A small, simple multiple-choice quiz function designed to enhance learning through interactive questions and answers."
+            }
+        },
+        "LIVE_TEST": "Live Test",
+        "GITHUB": "Github"
+    },
+    "CONTACT": {
+        "HEADLINE": "Contact",
+        "INTRODUCTION": "Got a problem to solve?",
+        "DESCRIPTION_1": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "DESCRIPTION_2": "Need a Frontend developer?",
+        "DESCRIPTION_3": "Contact me!",
+        "NAME_PLACEHOLDER": "Name",
+        "EMAIL_PLACEHOLDER": "Email",
+        "MESSAGE_PLACEHOLDER": "Message",
+        "SEND_BUTTON": "Send message",
+        "NAME_ERROR": "Please enter a name",
+        "EMAIL_ERROR": "Please enter a valid email",
+        "MESSAGE_ERROR": "Please enter a message",
+        "PRIVACY_POLICY_TEXT1": "I have read the  ",
+        "PRIVACY_POLICY_TEXT2": "privacy policy ",
+        "PRIVACY_POLICY_TEXT3": "and agree to the processing of my data as outlined.",
+        "PRIVACY_POLICY_ERROR": "You must agree to the privacy policy",
+        "SUCCESS_MESSAGE": "Your message has been sent successfully"
+    },
+    "FOOTER": {
+        "IMPRINT": "Imprint",
+        "EMAIL_COPIED": "Email copied!"
+    }
+}

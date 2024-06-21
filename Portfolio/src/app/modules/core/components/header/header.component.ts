@@ -1,16 +1,16 @@
 import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from '../../../pages/main/hero/hero.component';
-
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [CommonModule, HeroComponent]
+  imports: [CommonModule, HeroComponent, TranslateModule]
 })
 export class HeaderComponent implements AfterViewInit {
-
+  isGerman: boolean = true;
   logoUrl: string = 'assets/img/logo.png';
   linkUrl: string = '#hero';
   burgerMenuOpen: boolean = false;
@@ -19,6 +19,12 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('burger') burger!: ElementRef;
   @ViewChild('checkbox4') checkbox!: ElementRef<HTMLInputElement>;
   @ViewChild('header') header!: ElementRef;
+
+  constructor(private translate: TranslateService) { }
+
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
+  }
 
   ngAfterViewInit() {
 
@@ -54,9 +60,7 @@ export class HeaderComponent implements AfterViewInit {
       this.burgerMenu.nativeElement.classList.add('d-none');
       this.checkbox.nativeElement.checked = false;
     }, 1000);
-
     this.header.nativeElement.classList.remove('fixed');
-
   }
 
   linkClicked(): void {

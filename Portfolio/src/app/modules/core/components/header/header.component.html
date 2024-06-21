@@ -1,19 +1,41 @@
 <div class="header-wrapper" id="hero" #header>
   <div class="header">
     <a [href]="linkUrl" class="header-logo">
-      <img href="/" [src]="logoUrl" alt="Logo" [ngStyle]="{ 'height.px': 80 }" />
+      <img
+        href="/"
+        [src]="logoUrl"
+        alt="Logo"
+        [ngStyle]="{ 'height.px': 80 }"
+      />
     </a>
 
     <div class="nav-links">
       <ul>
-        <li><a class="underline-link" href="#about">About me</a></li>
-        <li><a class="underline-link" href="#skills">Skills</a></li>
-        <li><a class="underline-link" href="#portfolio">Portfolio</a></li>
+        <li>
+          <a class="underline-link" href="#about">{{
+            "HEADER.ABOUT_ME" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="underline-link" href="#skills">{{
+            "HEADER.SKILLS" | translate
+          }}</a>
+        </li>
+        <li>
+          <a class="underline-link" href="#portfolio">{{
+            "HEADER.PORTFOLIO" | translate
+          }}</a>
+        </li>
       </ul>
     </div>
 
     <div class="container" #burger>
-      <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden" #checkbox4 />
+      <input
+        type="checkbox"
+        id="checkbox4"
+        class="checkbox4 visuallyHidden"
+        #checkbox4
+      />
       <label for="checkbox4" (click)="toggleBurgerMenu()" id="burgerMenuButton">
         <div class="hamburger hamburger4">
           <span class="bar bar1"></span>
@@ -27,10 +49,45 @@
 
     <div class="mobile-nav-links d-none" #burgerMenu>
       <div class="mobile-link-wrapper">
-        <a (click)="linkClicked()" href="#about">About me</a>
-        <a (click)="linkClicked()" href="#skills">Skills</a>
-        <a (click)="linkClicked()" href="#portfolio">Portfolio</a>
+        <a (click)="linkClicked()" href="#about">{{
+          "HEADER.ABOUT_ME" | translate
+        }}</a>
+        <a (click)="linkClicked()" href="#skills">{{
+          "HEADER.SKILLS" | translate
+        }}</a>
+        <a (click)="linkClicked()" href="#portfolio">{{
+          "HEADER.PORTFOLIO" | translate
+        }}</a>
+        <div class="mobile-language-buttons" #langButton>
+          <img
+            (click)="switchLanguage('en')"
+            class="mobile-language-button1"
+            src="assets/img/en.png"
+            alt=""
+          />
+          <img
+            (click)="switchLanguage('de')"
+            class="mobile-language-button2"
+            src="assets/img/de.png"
+            alt=""
+          />
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="language-buttons">
+    <img
+      (click)="switchLanguage('en')"
+      class="language-button1"
+      src="assets/img/en.png"
+      alt=""
+    />
+    <img
+      (click)="switchLanguage('de')"
+      class="language-button2"
+      src="assets/img/de.png"
+      alt=""
+    />
   </div>
 </div>

@@ -5,10 +5,11 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { ViewportService } from '../../../../shared/services/viewport/viewport-service.service';
 import { slideInOutLeft, slideInOutRight, slideInFromBottom } from '../../../../shared/animations/animations';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   animations: [

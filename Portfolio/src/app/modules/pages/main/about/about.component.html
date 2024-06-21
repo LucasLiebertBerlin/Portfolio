@@ -1,16 +1,12 @@
 <div class="content-wrapper" id="about">
   <div class="content-container">
     <div class="text-container">
-      <div [@slideInFromBottom]="slideInBottom" class="headline">About me</div>
+      <div [@slideInFromBottom]="slideInBottom" class="headline">
+        {{ "ABOUT.HEADLINE" | translate }}
+      </div>
       <div class="text">
-        <div
-        [@slideInOutLeft]="slideIn"
-         class="personal-start-text"
-        >
-          Hi, I am Lucas Liebert, a Front-end Developer based in
-          Glienicke/Nordbahn, Germany. I specialize in JavaScript and Angular,
-          with experience in developing web applications, business applications,
-          responsive websites, and browser games.
+        <div [@slideInOutLeft]="slideIn" class="personal-start-text">
+          {{ "ABOUT.INTRO" | translate }}
         </div>
         <div class="personal-text-container">
           <div class="svg" [@slideInOutLeft]="slideIn">
@@ -29,10 +25,7 @@
           </div>
 
           <p class="personal-text" [@slideInFromBottom]="slideInBottom">
-            I have a solid foundation in JavaScript and Angular, focusing on
-            developing engaging and functional web applications. My enthusiasm
-            for modern web technologies drives my continuous learning and
-            growth.
+            {{ "ABOUT.TEXT1" | translate }}
           </p>
         </div>
 
@@ -46,9 +39,7 @@
             </svg>
           </div>
           <p class="personal-text" [@slideInFromBottom]="slideInBottom">
-            I stay calm and precise under pressure, ensuring efficient work. My
-            effective time management helps me complete projects on schedule,
-            reflecting my commitment to reliability and growth.
+            {{ "ABOUT.TEXT2" | translate }}
           </p>
         </div>
       </div>

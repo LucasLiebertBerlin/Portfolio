@@ -3,10 +3,11 @@ import { Component, ElementRef, AfterViewInit, OnDestroy, ChangeDetectorRef } fr
 import { Subscription } from 'rxjs';
 import { ViewportService } from '../../../../shared/services/viewport/viewport-service.service'; 
 import { slideInOutLeft, slideInOutRight, slideInFromBottom } from '../../../../shared/animations/animations';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
   animations: [

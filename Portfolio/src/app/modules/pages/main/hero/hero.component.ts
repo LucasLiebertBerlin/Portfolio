@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { slideInOutLeft, slideInOutRight, slideInFromBottom } from '../../../../shared/animations/animations';
 import { ViewportService } from '../../../../shared/services/viewport/viewport-service.service';
 import { Subscription } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   templateUrl: './hero.component.html',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   styleUrls: ['./hero.component.scss'],
   animations: [
     slideInOutLeft,

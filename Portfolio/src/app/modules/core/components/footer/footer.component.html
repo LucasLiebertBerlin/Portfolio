@@ -1,7 +1,7 @@
 <div class="content-container">
   <div class="footer-links">
     <img href="/" src="assets/img/logo.png" alt="" />
-    <a href="/imprint">Impressum</a>
+    <a href="/imprint">  {{ "FOOTER.IMPRINT" | translate }}</a>
   </div>
   <div class="copywrite">&copy; Lucas Liebert 2024</div>
 
@@ -14,4 +14,4 @@
   <a routerLink="/imprint" class="mobile-imprint">Imprint</a>
 
 </div>
-<div #copyAlert class="copy-alert d-none">Email kopiert!</div>
+<div #copyAlert class="copy-alert d-none">  {{ "FOOTER.EMAIL_COPIED" | translate }}</div>

@@ -1,28 +1,21 @@
-<div
-  [@slideInOutLeft]="slideIn"
-  [ngClass]="{ 'row-reverse': rowReverse }"
-  class="content-container"
->
-  <img [src]="projectImage" alt="" />
+<div class="content-container">
+  <img [src]="projectImage" alt="Project Image" />
   <div class="introduction-container">
-    <div
-      [ngClass]="{ 'align-right': rowReverse }"
-      class="introduction-headline"
-    >
-      {{ headline }}
+    <div class="introduction-headline">
+      {{ headlineKey | translate }}
     </div>
-    <div [ngClass]="{ 'align-right': rowReverse }" class="tech-stack">
-      {{ techStack }}
+    <div class="tech-stack">
+      {{ techStackKey | translate }}
     </div>
-    <p [ngClass]="{ 'align-right': rowReverse }" class="introduction">
-      {{ description }}
+    <p class="introduction">
+      {{ descriptionKey | translate }}
     </p>
     <div class="button-container">
       <div class="test-button">
-        <a [href]="liveTestLink" target="_blank">Live Test</a>
+        <a [href]="liveTestLink" target="_blank">{{ 'PORTFOLIO.LIVE_TEST' | translate }}</a>
       </div>
       <div class="git-button">
-        <a [href]="gitLink" target="_blank">Github</a>
+        <a [href]="gitLink" target="_blank">{{ 'PORTFOLIO.GITHUB' | translate }}</a>
       </div>
     </div>
   </div>

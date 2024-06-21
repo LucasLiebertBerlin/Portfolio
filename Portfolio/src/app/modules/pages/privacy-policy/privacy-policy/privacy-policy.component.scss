@@ -1,0 +1,19 @@
+@import './../../../../../styles.scss';
+@import './../../../mixins/mixin.scss';
+
+* {
+    margin: 0;
+    text-align: left;
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+.privacy-policy-container {
+    @include dflex(column);
+    text-align: left;
+    width: 100vw;
+    height: auto;
+    min-height: 45vh;
+    color: white;
+    margin:100px;
+}

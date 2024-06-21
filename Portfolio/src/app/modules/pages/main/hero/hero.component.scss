@@ -50,8 +50,9 @@
 .rotated-text-right {
     display: inline-block;
     transform: rotate(-90deg);
-    font-size: 64px;
+    font-size: 60px;
     color: white;
+    text-wrap: nowrap;
 }
 
 
@@ -339,6 +340,12 @@
 
     .content-container {
         overflow: hidden;
+    }
+}
+@media (max-width: 432px) {
+
+    .rotated-text-right {
+        max-width: 50px;
     }
 }
 

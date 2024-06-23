@@ -22,6 +22,7 @@
     @include dflex(row, space-between, center);
     height: 100%;
     width: 100%;
+    max-width: 1920px;
     margin-left: 50px;
     margin-right: 100px;
 }
@@ -277,6 +278,12 @@ h1 {
 
     &:hover {
         filter: brightness(0.5);
+    }
+}
+
+@media (min-width: 1920px) {
+    .language-buttons {
+        right: 50%;
     }
 }
 

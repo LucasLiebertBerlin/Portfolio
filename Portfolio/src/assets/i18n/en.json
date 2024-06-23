@@ -64,11 +64,90 @@
         "NAME_ERROR": "Please enter a name",
         "EMAIL_ERROR": "Please enter a valid email",
         "MESSAGE_ERROR": "Please enter a message",
-        "PRIVACY_POLICY_TEXT1": "I have read the  ",
-        "PRIVACY_POLICY_TEXT2": "privacy policy ",
-        "PRIVACY_POLICY_TEXT3": "and agree to the processing of my data as outlined.",
+        "PRIVACY_POLICY_TEXT1": "I have read the ",
+        "PRIVACY_POLICY_TEXT2": "privacy policy",
+        "PRIVACY_POLICY_TEXT3": " and agree to the processing of my data as outlined.",
         "PRIVACY_POLICY_ERROR": "You must agree to the privacy policy",
         "SUCCESS_MESSAGE": "Your message has been sent successfully"
+    },
+    "IMPRINT": {
+        "HEADLINE": "Imprint",
+        "CONTACT": "Contact",
+        "TELEPHONE": "Telephone",
+        "EMAIL": "Email"
+    },
+    "PRIVACY_POLICY": {
+        "HEADLINE": "Privacy Policy",
+        "INTRO": "We are committed to protecting your personal data. Below, we provide detailed information about how we handle your data.",
+        "RESPONSIBLE": {
+            "TITLE": "1. Responsible Party",
+            "DESCRIPTION": "The party responsible for processing data on this website is:<br />Lucas Liebert<br />[Your address, if desired]<br />Email: [Your email address]"
+        },
+        "DATA_COLLECTION": {
+            "TITLE": "2. Collection and Storage of Personal Data and the Nature and Purpose of Their Use",
+            "VISIT": {
+                "TITLE": "a) When visiting the website",
+                "DESCRIPTION": "When you visit our website, the browser used on your device automatically sends information to the server on our website. This information is temporarily stored in a log file. The following information is collected without your intervention and stored until it is automatically deleted:",
+                "ITEMS": [
+                    "IP address of the requesting computer,",
+                    "Date and time of access,",
+                    "Name and URL of the retrieved file,",
+                    "Website from which access is made (referrer URL),",
+                    "Browser used and, if applicable, the operating system of your computer and the name of your access provider."
+                ],
+                "PURPOSE": "The mentioned data will be processed by us for the following purposes:",
+                "PURPOSE_ITEMS": [
+                    "Ensuring a smooth connection setup of the website,",
+                    "Ensuring comfortable use of our website,",
+                    "Evaluation of system security and stability as well as",
+                    "For further administrative purposes."
+                ],
+                "LEGAL_BASIS": "The legal basis for data processing is Art. 6 para. 1 sentence 1 lit. f GDPR. Our legitimate interest follows from the purposes for data collection listed above. In no case do we use the collected data for the purpose of drawing conclusions about your person."
+            },
+            "CONTACT_FORM": {
+                "TITLE": "b) When using our contact form",
+                "DESCRIPTION": "For questions of any kind, we offer you the opportunity to contact us using a form provided on the website. The specification of a valid email address is required so that we know who the inquiry is from and to be able to respond to it. Further information can be provided voluntarily.",
+                "LEGAL_BASIS": "The data processing for the purpose of contacting us is carried out in accordance with Art. 6 para. 1 sentence 1 lit. a GDPR on the basis of your voluntarily given consent.",
+                "DATA_DELETION": "The personal data collected by us for the use of the contact form will be automatically deleted after completion of your request."
+            }
+        },
+        "DATA_TRANSFER": {
+            "TITLE": "3. Data Transfer",
+            "DESCRIPTION": "Your personal data will not be transferred to third parties for purposes other than those listed below. We only share your personal data with third parties if:",
+            "ITEMS": [
+                "You have given your explicit consent according to Art. 6 para. 1 sentence 1 lit. a GDPR,",
+                "The transfer is necessary for the establishment, exercise or defense of legal claims and there is no reason to assume that you have an overriding legitimate interest in not having your data disclosed,",
+                "There is a legal obligation for the transfer according to Art. 6 para. 1 sentence 1 lit. c GDPR, as well as",
+                "It is legally permissible and necessary for the processing of contractual relationships with you according to Art. 6 para. 1 sentence 1 lit. b GDPR."
+            ]
+        },
+        "RIGHTS": {
+            "TITLE": "4. Rights of Data Subjects",
+            "DESCRIPTION": "You have the right:",
+            "ITEMS": [
+                "To request information about your personal data processed by us in accordance with Art. 15 GDPR. In particular, you can request information about the purposes of processing, the category of personal data, the categories of recipients to whom your data has been or will be disclosed, the planned storage period, the existence of a right to rectification, deletion, restriction of processing or objection, the existence of a right to complain, the origin of your data, if it was not collected by us, as well as the existence of automated decision-making including profiling and, if applicable, meaningful information about its details;",
+                "To immediately request the correction of incorrect or incomplete personal data stored by us in accordance with Art. 16 GDPR;",
+                "To request the deletion of your personal data stored by us in accordance with Art. 17 GDPR, unless the processing is necessary for the exercise of the right to freedom of expression and information, to fulfill a legal obligation, for reasons of public interest or for the establishment, exercise or defense of legal claims;",
+                "To request the restriction of processing your personal data in accordance with Art. 18 GDPR, as far as the accuracy of the data is disputed by you, the processing is unlawful, but you reject its deletion and we no longer need the data, but you need it for the establishment, exercise or defense of legal claims or you have objected to the processing in accordance with Art. 21 GDPR;",
+                "To receive your personal data, which you have provided to us, in a structured, commonly used and machine-readable format or to request the transfer to another responsible party in accordance with Art. 20 GDPR;",
+                "To revoke your once given consent to us at any time in accordance with Art. 7 para. 3 GDPR. This has the consequence that we may no longer continue the data processing based on this consent for the future and",
+                "To complain to a supervisory authority in accordance with Art. 77 GDPR. As a rule, you can contact the supervisory authority of your usual place of residence or workplace or our office."
+            ]
+        },
+        "OBJECTION": {
+            "TITLE": "5. Right to Object",
+            "DESCRIPTION": "If your personal data is processed based on legitimate interests in accordance with Art. 6 para. 1 sentence 1 lit. f GDPR, you have the right to object to the processing of your personal data in accordance with Art. 21 GDPR, as far as there are reasons for this arising from your particular situation or the objection is directed against direct marketing. In the latter case, you have a general right to object, which is implemented by us without specifying a particular situation.",
+            "CONTACT": "If you would like to exercise your right of revocation or objection, please send an email to [Your email address]."
+        },
+        "SECURITY": {
+            "TITLE": "6. Data Security",
+            "DESCRIPTION": "We use the widely used SSL (Secure Socket Layer) procedure in connection with the highest encryption level supported by your browser during the website visit. Usually, this is a 256-bit encryption. If your browser does not support 256-bit encryption, we use 128-bit v3 technology instead. Whether a single page of our website is transmitted in encrypted form can be identified by the closed display of the key or lock symbol in the lower status bar of your browser.",
+            "TECH_MEASURES": "We also use appropriate technical and organizational security measures to protect your data against accidental or intentional manipulation, partial or complete loss, destruction or against unauthorized access by third parties. Our security measures are continuously improved in line with technological developments."
+        },
+        "CHANGES": {
+            "TITLE": "7. Changes to this Privacy Policy",
+            "DESCRIPTION": "This privacy policy is currently valid and has the status [Date].<br />Due to the further development of our website and offers above or due to changed legal or regulatory requirements, it may become necessary to change this privacy policy. The current privacy policy can be accessed and printed by you at any time on the website under [Link to the privacy policy]."
+        }
     },
     "FOOTER": {
         "IMPRINT": "Imprint",

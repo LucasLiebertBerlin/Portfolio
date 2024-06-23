@@ -1,11 +1,19 @@
 @import './../../../../../styles.scss';
 @import './../../../mixins/mixin.scss';
 
+.flex-wrapper {
+    @include dflex();
+    width: 100%;
+    position: relative;
+}
+
 .content-container {
     position: relative;
     @include dflex(column);
     background-color: $darkblue;
     height: 100vh;
+    width:100%;
+    max-width: 1920px;
 }
 
 .headline-container {
@@ -15,10 +23,18 @@
     z-index: 60;
 }
 
+.line-wrapper {
+    position: relative;
+    width: 20vw;
+}
+
 .deco-line {
+    position: absolute;
     background-color: $purple;
-    width: 300px;
+    // width: 300px;
+    width: 999999px;
     height: 4px;
+    right:0;
     margin-right: 50px;
 }
 
@@ -156,6 +172,7 @@ input[type="checkbox"] {
 
 .container .checkmark {
     width: 20px !important;
+    min-width: 20px;
     height: 20px !important;
     border: 2px solid $purple;
     border-radius: 4px;
@@ -244,7 +261,7 @@ input[type="checkbox"]:checked+.checkmark::after {
     position: absolute;
     z-index: 40;
     left: 0;
-    bottom: -200px;
+    bottom: 0;
 }
 
 .email-alert {
@@ -525,6 +542,7 @@ $color-2: #fff;
     .animation {
         width: 340px;
     }
+
     .email-alert {
         left: 55%;
     }
@@ -574,7 +592,7 @@ $color-2: #fff;
 
     .deco-line {
         margin-right: 10px;
-        width: 10vw;
+        // width: 10vw;
     }
 
     .introduction-headline {
@@ -609,10 +627,12 @@ $color-2: #fff;
     .animation {
         width: 100px;
     }
+
     .email-alert {
         left: 80%;
         width: 100%;
     }
+
     .message {
         display: none;
     }

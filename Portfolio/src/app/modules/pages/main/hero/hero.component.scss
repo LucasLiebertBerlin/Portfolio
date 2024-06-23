@@ -1,22 +1,33 @@
 @import './../../../../../styles.scss';
 @import './../../../mixins/mixin.scss';
 
+.flex-wrapper {
+    @include dflex();
+    position: relative;
+    width: 100%;
+}
+
 .content-wrapper {
     position: relative;
     height: calc(100vh - 109px);
     background-color: $darkblue;
+    @include dflex();
+    width: 100%;
+    max-width: 1920px;
 }
 
 .content-container {
     @include dflex(row, space-between, center);
     height: calc(100vh - 200px);
     overflow-y: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 .hero-img {
     position: absolute;
     z-index: 1;
-    right: -100px;
+    right: 0px;
     bottom: 0px;
     height: 90vh;
 }
@@ -121,10 +132,17 @@
     color: white;
 }
 
+.line-wrapper {
+    position: relative;
+    width: 10vw;
+}
+
 .decoration-line {
     border-bottom: 4px solid $purple;
-    width: 10%;
+    width: 9999999px;
     margin-right: 50px;
+    position: absolute;
+    right: 0;
 }
 
 .socials {
@@ -199,9 +217,11 @@
 .copy-alert.slide-out {
     bottom: -3000px;
 }
+
 .email-adress {
-    margin-left:15px;
+    margin-left: 15px;
     font-size: 23px;
+
     &:hover {
         color: $green !important;
     }
@@ -281,8 +301,12 @@
 
     .socials {
         @include dflex(row, center);
-        width: 60vw;
+        width: auto;
         margin-right: 20vw;
+
+        >img {
+            margin-right: 13px;
+        }
 
         >a {
 
@@ -292,7 +316,7 @@
     }
 
     .decoration-line {
-        width: 20vw;
+        width: 100%;
         margin-right: 0;
     }
 
@@ -303,6 +327,10 @@
     .scroll-down {
         display: block;
     }
+
+    .email-adress {
+        display: none;
+    }
 }
 
 @media (max-width: 860px) {
@@ -310,15 +338,12 @@
     .text-container {
         margin-left: 0px;
     }
+
 }
 
 @media (max-width: 760px) {
 
     .scroll-down {
-        display: none;
-    }
-
-    .email-adress {
         display: none;
     }
 
@@ -342,11 +367,17 @@
         overflow: hidden;
     }
 }
+
 @media (max-width: 432px) {
 
     .rotated-text-right {
         max-width: 50px;
     }
+
+    // .line-wrapper {
+    //     width: 20vw;
+    //     transform: translate(-50%);
+    // }
 }
 
 @media (max-width: 375px) {

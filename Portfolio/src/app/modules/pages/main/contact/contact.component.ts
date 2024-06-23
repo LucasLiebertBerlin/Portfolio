@@ -6,10 +6,11 @@ import { Subscription } from 'rxjs';
 import { ViewportService } from '../../../../shared/services/viewport/viewport-service.service';
 import { slideInOutLeft, slideInOutRight, slideInFromBottom } from '../../../../shared/animations/animations';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [CommonModule, FormsModule, TranslateModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   animations: [

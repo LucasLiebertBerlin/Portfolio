@@ -1,10 +1,18 @@
 @import './../../../../../styles.scss';
 @import './../../../mixins/mixin.scss';
 
+.flex-wrapper {
+    position: relative;
+    @include dflex();
+    width: 100%;
+    background-color: rgb(25, 35, 55);
+}
+
 .content-wrapper {
     background-color: rgb(25, 35, 55);
     @include dflex();
     width: 100%;
+    max-width: 1920px;
 }
 
 .content-container {
@@ -19,6 +27,7 @@
 .text-container {
     width: 471px;
     margin-right: 10%;
+    z-index: 90;
 }
 
 .personal-text-container {
@@ -26,12 +35,14 @@
     width: 471px;
     font-size: 16px;
     color: white;
+    z-index: 90;
 }
 
 .personal-start-text {
     font-size: 16px;
     color: white;
     width: 471px;
+    z-index: 90;
 }
 
 .svg {
@@ -40,8 +51,10 @@
 }
 
 .personal-text {
+    position: relative;
     width: 359px;
     font-size: 16px;
+    z-index: 50;
 }
 
 .author-container {
@@ -61,18 +74,26 @@
     }
 }
 
+.line-wrapper {
+    position: relative;
+    width: 100%;
+}
+
 .deco-line {
     border-bottom: 4px solid $green;
-    width: 100%;
+    width: 99999px;
     height: 10px;
     right: 0;
     z-index: 30;
+    position: absolute;
+    left: 0;
 }
 
 .shadow {
     position: absolute;
     z-index: 3;
     right: 0;
+    top: 30%;
 }
 
 @media (max-width: 1305px) {
@@ -88,6 +109,10 @@
     .content-wrapper {
         background-color: $darkblue;
     }
+
+    .flex-wrapper {
+        background-color: $darkblue;
+    }
 }
 
 @media (max-width: 1150px) {
@@ -100,21 +125,27 @@
         display: none;
     }
 
+    .content-wrapper {
+        width: auto;
+    }
+
     .content-container {
         margin-left: 0;
         @include dflex(row, center, center);
+        width: 100%;
     }
 
     .text-container {
         margin-right: 20px;
         margin-left: 20px;
+        width: 100%;
     }
 }
 
 @media (max-width: 560px) {
 
     .text-container {
-        max-width: 80vw;
+        // max-width: 80vw;
     }
 
     .headline {
@@ -122,12 +153,15 @@
     }
 
     .personal-start-text {
-        width: auto;
+        // width: auto;
+        max-width: 80vw;
         text-wrap: wrap;
     }
 
     .personal-text-container {
-        width: auto;
+        // width: auto;
+        max-width: 80vw;
+
         @include dflex(row, flex-start, flex-start);
     }
 
@@ -140,13 +174,13 @@
         margin-top: 20px;
         margin-right: 10px;
     }
-}
-
-@media (max-width: 400px) {
 
     .content-container {
         height: auto;
         padding-top: 100px;
         padding-bottom: 0px;
     }
-} 
+
+}
+
+@media (max-width: 400px) {}

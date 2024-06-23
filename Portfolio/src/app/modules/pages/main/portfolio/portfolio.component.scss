@@ -1,6 +1,11 @@
 @import './../../../../../styles.scss';
 @import './../../../mixins/mixin.scss';
 
+.flex-wrapper2 {
+    @include dflex();
+    position: relative;
+}
+
 .content-container {
     @include dflex(column);
     padding-top: 100px;
@@ -8,6 +13,7 @@
     background-color: $darkblue;
     width: 100%;
     position: relative;
+    max-width: 1920px;
 }
 
 .headline-content-container {
@@ -39,15 +45,20 @@
 .big-purple-shadow {
     position: absolute;
     left: 0;
-    top: 1000px;
+    top: 20%;
     z-index: 40;
 }
 
 .big-green-shadow {
     position: absolute;
     right: 0;
-    top: 2000px;
+    top: 50%;
     z-index: 51;
+}
+
+.line-wrapper {
+    position: relative;
+    width: 30vw;
 }
 
 .deco-line-left {
@@ -57,13 +68,25 @@
 }
 
 .deco-line-right {
-    width: 35vw;
+    // width: 35vw;
     background-color: $purple;
     height: 4px;
+    position: absolute;
+    left: 0;
+    width: 9999999px;
+
 }
 
 .projects-container {
     z-index: 80;
+}
+
+@media (min-width: 1920px) {
+
+    .line-wrapper {
+        position: relative;
+        width: 20vw;
+    }
 }
 
 @media (max-width: 1445px) {
@@ -85,9 +108,9 @@
 
 @media (max-width: 965px) {
 
-    .deco-line-right {
-        width: 20vw;
-    }
+    // .deco-line-right {
+    //     width: 20vw;
+    // }
 
     .deco-line-left {
         width: 10%;
@@ -118,9 +141,9 @@
         text-wrap: wrap;
     }
 
-    .deco-line-right {
-        width: 30vw;
-    }
+    // .deco-line-right {
+    //     width: 30vw;
+    // }
 
     .big-purple-shadow {
 
@@ -133,16 +156,16 @@
 
 @media (max-width: 460px) {
 
-    .deco-line-right {
-        width: 20vw;
-    }
+    // .deco-line-right {
+    //     width: 20vw;
+    // }
 }
 
 @media (max-width: 380px) {
 
-    .deco-line-right {
-        width: 10vw;
-    }
+    // .deco-line-right {
+    //     width: 10vw;
+    // }
 }
 
 @media (max-width: 340px) {
